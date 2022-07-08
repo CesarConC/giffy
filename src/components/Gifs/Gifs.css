@@ -1,0 +1,17 @@
+.Gif {
+    border: 1px solid white;
+    border-radius: 3% 3% 0 0 ;
+    display: flex;
+    text-decoration: none;
+    color: whitesmoke;
+    flex-direction: column;
+    margin: 2rem;
+}
+
+.Gif > img {
+    padding: 1rem 1rem 0 1rem;
+}
+
+.Gif > small {
+    padding: 1rem;
+}
