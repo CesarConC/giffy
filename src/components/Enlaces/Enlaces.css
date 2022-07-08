@@ -1,12 +1,15 @@
 .enlaces-gifs {
     display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+    flex-direction: column;
+    align-items:left;
+    justify-content:left;
+    padding: 2rem;
+    text-align: left;
 }
 
 .busqueda {
-    margin: 2rem;
+    margin: 1rem 2rem 2rem 2rem;
+    align-self: center;
 }
 
 .barra-busqueda {

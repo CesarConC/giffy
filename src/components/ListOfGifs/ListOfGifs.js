@@ -4,6 +4,7 @@ import './ListOfGifs.css';
 import { useGIFS } from "../../hooks/useGIFS";
 
 export default function ListOfGifs ({ params }) {
+    //console.log(params)
     const {keyword} = params
     const {loading, gifs} = useGIFS({keyword})
 
