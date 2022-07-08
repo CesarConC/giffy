@@ -6,7 +6,7 @@ import { useGIFS } from "../../hooks/useGIFS";
 export default function ListOfGifs ({ params }) {
     //console.log(params)
     const {keyword} = params
-    const {loading, gifs} = useGIFS({keyword})
+    const {loading, gifs, setPage} = useGIFS({keyword})
 
     /*
     const [gifs, setGifs] = useState([])
@@ -23,23 +23,27 @@ export default function ListOfGifs ({ params }) {
     }, [keyword])
     */
 
+    const handleNextPage = () => setPage(prevPage => prevPage + 1)
+
     if (loading) {
       return <h2>Cargando...</h2>
     }
 
-    return <div className="lista-gifs">
-      {
-        gifs.map(singleGif => 
-          <Gif 
-              key={singleGif.id}
-              title={singleGif.title} 
-              url={singleGif.url} 
-              id={singleGif.id}
-          />
-        )
-      }
-
-    </div>
-    
-    
+    return <>
+            <div className="lista-gifs">
+              {
+                gifs.map(singleGif => 
+                  <Gif 
+                      key={singleGif.id}
+                      title={singleGif.title} 
+                      url={singleGif.url} 
+                      id={singleGif.id}
+                  />
+                )
+              }
+            </div>
+            <div className="mas-gifs">
+              <button className="obtener-mas-gifs" onClick={handleNextPage}>Más gifs</button>
+            </div>
+          </> 
 }

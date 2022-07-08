@@ -16,13 +16,15 @@ function App() {
     <div className="App">
       <section className="App-content">
 
-        <h1><Link className="enlace" to="/">Mi App de Gifs</Link></h1>
-
-        <GifsContextProvider>
-        <Route component={Enlaces} path="/" />
-        <Route component={ListOfGifs} path="/search/:keyword" />
-        <Route component={InfoGif} path="/gif/:id" />
-        </GifsContextProvider>
+        <h1><Link className="enlace" to="/">GIFFY</Link></h1>
+        <div className="contenedor">
+          <GifsContextProvider >
+          <Route component={Enlaces} path="/" />
+          <Route component={ListOfGifs} path="/search/:keyword" />
+          <Route component={InfoGif} path="/gif/:id" />
+          </GifsContextProvider>
+        </div>
+        
         
       </section>
     </div>

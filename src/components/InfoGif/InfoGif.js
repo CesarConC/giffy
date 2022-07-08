@@ -1,8 +1,8 @@
 import React, {useContext} from "react";
-import Context from "../../context/StaticContext";
 import GifsContext from "../../context/GifsContext";
 import Gif from "../Gifs/Gifs";
-import { type } from "@testing-library/user-event/dist/type";
+import './InfoGif.css'
+
 
 export default function InfoGif({params}) {
     const {gifs, setGifs} = useContext(GifsContext)
@@ -15,5 +15,9 @@ export default function InfoGif({params}) {
         }
     }    
 
-    return <Gif {...gif} />
+    return <div className="info-div">
+        <h3>{gif.title}</h3>
+        <Gif {...gif} />
+    </div>
+    
 }

@@ -1,8 +1,9 @@
-const apiKey = 'YljNhF2W5GzsOqXetExN5DzdP8OXmE0i'
+import {apiKey, API_URL} from './settings'
 
 
-export default function getGifs({ keyword = 'pandas' } = {}) {
-    const apiURL = `https://api.giphy.com/v1/gifs/search?api_key=${apiKey}&q=${keyword}&limit=10&offset=0&rating=g&lang=en`
+
+export default function getGifs({ keyword = 'pandas', page = 0} = {}) {
+    const apiURL = `${API_URL}/gifs/search?api_key=${apiKey}&q=${keyword}&limit=20&offset=${page * 20}&rating=g&lang=en`
 
     // asi se hace una llamada a una api. MUY INTERESANTE
 

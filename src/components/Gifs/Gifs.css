@@ -1,17 +1,22 @@
 .Gif {
-    border: 1px solid white;
-    border-radius: 3% 3% 0 0 ;
     display: flex;
     text-decoration: none;
     color: whitesmoke;
     flex-direction: column;
-    margin: 2rem;
+    z-index: 1;
+    position: relative;
 }
 
-.Gif > img {
-    padding: 1rem 1rem 0 1rem;
+.imagen-gif {
+    width: 100%;
 }
 
-.Gif > small {
-    padding: 1rem;
+small {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-size: 12px;
+    z-index: 3;
+    background-color: lightslategray;
+    font-weight: bold;
 }

@@ -1,5 +1,12 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
 .App {
-  text-align: center;
+  text-align: left;
+  font-family: 'Poppins', sans-serif;
+}
+
+input, button {
+  font-family: 'Poppins', sans-serif;
 }
 
 .App-content {
@@ -13,9 +20,15 @@
   color: white;
 }
 
+.contenedor {
+  width: 80%;
+}
+
 .enlace {
   color: white;
   text-decoration: none;
+  text-align: left;
+  font-size: 64px;
 }
 
 .enlace:visited {

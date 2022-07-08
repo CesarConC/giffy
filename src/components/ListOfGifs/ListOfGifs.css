@@ -1,4 +1,34 @@
 .lista-gifs {
+    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 16px 16px;
+    min-height: 100vh;
+    grid-template-rows: masonry;
+    /* La altura minima sirve para que al cargar las tendencias de forma 
+        lazy, en caso de que tarde en ejecutarse la llamada a la api y las 
+        ultimas busquedas tarden en cargar, las tendencias no se carguen 
+        de ninguna manera a menos que el usuario baje hasta el final de la 
+        pagina*/
+}
+
+.mas-gifs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    display: inline-block;
+}
+
+.obtener-mas-gifs {
+    border-radius: 3%;
+    border: none;
+    padding: 0.5rem 1rem;
+    margin: 2rem;
+    font-weight: bold;
+}
+
+.obtener-mas-gifs:hover {
+    cursor: pointer;
+    transform: scale(1.10);
 }
