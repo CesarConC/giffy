@@ -17,6 +17,7 @@ function App() {
       <section className="App-content">
 
         <h1><Link className="enlace" to="/">GIFFY</Link></h1>
+        <h6>Created by César</h6>
         <div className="contenedor">
           <GifsContextProvider >
           <Route component={Enlaces} path="/" />
