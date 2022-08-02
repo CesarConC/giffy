@@ -23,6 +23,9 @@ export default function ListOfGifs ({ params }) {
     }, [keyword])
     */
 
+
+
+    
     const handleNextPage = () => setPage(prevPage => prevPage + 1)
 
     if (loading) {
