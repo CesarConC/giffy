@@ -1,10 +1,11 @@
-import React, {useCallback} from "react";
+import React, {useCallback, useS} from "react";
 import './Enlaces.css';
 import { Link, Route, useLocation } from "wouter";
 import ListOfGifs from "../ListOfGifs/ListOfGifs";
 import { useGIFS } from "../../hooks/useGIFS";
 import LazyTrending from "../TrendingSearches";
 import SearchForm from "../SearchForm";
+import useTitle from "../../hooks/useTitle";
 
 
 export default function Enlaces () {
@@ -16,10 +17,11 @@ export default function Enlaces () {
 
     const handleSubmit = useCallback(({key}) => {
         pushLocation(`/search/:${key}`)
+
     }, [pushLocation])
 
     //if (Object.keys(gifs).length != 0) {
-        
+
     return <div>
         <div className="enlaces-gifs">
             <SearchForm onSubmit={handleSubmit} />

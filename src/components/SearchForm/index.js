@@ -1,10 +1,13 @@
 import React, {useState} from "react";
+import useTitle from "../../hooks/useTitle";
+import './index.css';
 
 function SearchForm ({ onSubmit }) {
     const [key, setKeyword] = useState('')
 
     const handleSubmit = event => {
         event.preventDefault()
+        
         onSubmit({key})
     }
 

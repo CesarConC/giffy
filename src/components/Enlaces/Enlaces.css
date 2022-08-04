@@ -27,3 +27,19 @@
     color: white;
 }
 
+@media (max-width: 900px) {
+    .enlaces-gifs {
+        display: flex;
+        text-align: center;
+        justify-content:center;
+        flex-direction: column;
+    }
+
+    .barra-busqueda {
+        padding: 0.5rem 1rem 0.5rem 1rem;
+        border-radius: 3%;
+        border: none;
+        font-weight: bold;
+        margin: 2rem auto 0 auto;
+    }
+}
